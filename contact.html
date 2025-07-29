@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | BrittonWeb</title>
+  <meta name="description" content="Get in touch with BrittonWeb for web design services, support, or questions.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>BrittonWeb</h1>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/portfolio.html">Portfolio</a></li>
+        <li><a href="/quote.html">Get a Quote</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h2>Contact Me</h2>
+      <p>Have a question or need help? Fill out the form or send me an email anytime.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-form">
+      <div class="container">
+        <form name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact">
+
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button type="submit" class="cta">Send Message</button>
+        </form>
+
+        <div class="direct-contact">
+          <h3>Or Reach Out Directly</h3>
+          <p>Email: <a href="mailto:leebritton98@gmail.com">leebritton98@gmail.com</a></p>
+          <p>GitHub: <a href="https://github.com/lelandbritton" target="_blank">github.com/lelandbritton</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BrittonWeb. Built with HTML & CSS by Leland Britton.</p>
+    <div class="socials">
+      <a href="mailto:leebritton98@gmail.com">Email</a>
+      <a href="https://github.com/lelandbritton">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>

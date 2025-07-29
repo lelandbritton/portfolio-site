@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Quote | BrittonWeb</title>
+  <meta name="description" content="Request a free custom website quote from BrittonWeb. Let us know what you need and we'll get back to you fast.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>BrittonWeb</h1>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/portfolio.html">Portfolio</a></li>
+        <li><a href="/quote.html">Get a Quote</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h2>Get a Free Quote</h2>
+      <p>Tell me about your business and what kind of website you need. I’ll follow up quickly with a custom quote.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="quote-form">
+      <div class="container">
+        <form name="quote" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="quote">
+
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="business">Business Name</label>
+          <input type="text" id="business" name="business">
+
+          <label for="type">Type of Site</label>
+          <select id="type" name="type">
+            <option value="1-page">1-Page Website</option>
+            <option value="multi-page">Full Business Website (3–5 pages)</option>
+            <option value="not-sure">Not Sure Yet</option>
+          </select>
+
+          <label for="goals">What Do You Need?</label>
+          <textarea id="goals" name="goals" rows="5" placeholder="Tell me a bit about what you want your site to do..." required></textarea>
+
+          <button type="submit" class="cta">Submit Quote Request</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BrittonWeb. Built with HTML & CSS by Leland Britton.</p>
+    <div class="socials">
+      <a href="mailto:leebritton98@gmail.com">Email</a>
+      <a href="https://github.com/lelandbritton">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>
