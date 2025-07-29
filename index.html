@@ -1,13 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leland's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrittonWeb | Hand-Coded Websites</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, I'm Leland 👋</h1>
-  <p>This is my portfolio website.</p>
+  <header>
+    <nav>
+      <h1>BrittonWeb</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h2>Hand-Coded Websites for Local Businesses</h2>
+      <p>Fast, modern, and mobile-friendly websites — built from scratch, just for you.</p>
+      <a href="#contact" class="cta">Let's Work Together</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm a 17-year-old web developer from Sterling, Kansas, passionate about building fast, modern websites with real code — no page builders or templates. I started BrittonWeb to help small businesses get online with clean, custom-coded sites that stand out. Whether you're a gym, a barber, or a family-run shop, I can help you look professional on the web.</p>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <div class="service-list">
+      <div class="service">
+        <h3>1-Page Website</h3>
+        <p>Perfect for local businesses who need a clean, mobile-friendly site to get started.</p>
+        <span>$200</span>
+      </div>
+      <div class="service">
+        <h3>Multi-Page Website</h3>
+        <p>Great for businesses that want more details — includes up to 5 custom-coded pages.</p>
+        <span>$450</span>
+      </div>
+      <div class="service">
+        <h3>Monthly Maintenance</h3>
+        <p>Keep your site updated, secure, and running smoothly with monthly changes or edits.</p>
+        <span>$40/month</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="https://via.placeholder.com/400x250?text=Gym+Website" alt="Gym Website Demo">
+        <h3>Gym Website</h3>
+        <p>A sleek, modern website made for a fictional local gym.</p>
+        <a href="#">View Demo</a>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/400x250?text=Barbershop+Website" alt="Barbershop Website Demo">
+        <h3>Barbershop Website</h3>
+        <p>A stylish site designed for a classic barbershop experience.</p>
+        <a href="#">View Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BrittonWeb. Built with HTML & CSS by Leland Britton.</p>
+    <div class="socials">
+      <a href="mailto:leebritton98@gmail.com">Email</a>
+      <a href="https://github.com/lelandbritton">GitHub</a>
+    </div>
+  </footer>
 </body>
 </html>
