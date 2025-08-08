@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="hero">
+    <h2>Portfolio</h2>
+    <p>See examples of custom websites I've created for fictional local businesses.</p>
+  </div>
+
+  <main>
+    <section class="projects">
+      <div class="container">
+        <div class="project">
+          <img src="/images/gymspace.jpg" alt="Gym Website Demo">
+          <h3>Gym Website</h3>
+          <p>This sample project shows a high-energy landing page for a local gym. It includes bold design, membership CTAs, and mobile optimization.</p>
+          <a href="#" class="cta-alt">View Demo (Coming Soon)</a>
+        </div>
+
+        <div class="project">
+          <img src="/images/barbershop.jpeg" alt="Barbershop Website Demo">
+          <h3>Barbershop Website</h3>
+          <p>This sample barbershop site uses warm tones and a clean layout to reflect a classic experience with modern booking features.</p>
+          <a href="#" class="cta-alt">View Demo (Coming Soon)</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-cta">
+      <h3>Want a site like this for your business?</h3>
+        <a href="/quote" class="cta">Get a Free Quote</a>
+    </section>
+  </main>
+
+{% endblock content %}
+
