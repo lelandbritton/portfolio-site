@@ -416,14 +416,14 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  font-size: 1rem;
 }
 
 
 footer img{
   height: auto;
-
+  width: 15vw;
 }
-
 
 .footer-socials a{
   color: white;
