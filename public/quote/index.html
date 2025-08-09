@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrittonWeb | Custom Websites</title>
+  <meta name="description" content="BrittonWeb builds fast, SEO-friendly, mobile-responsive websites for small businesses in Sterling, Kansas and beyond.">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <a href="/" >
+          <img src="/images/HeaderWhiteLogo.png" alt="BrittonWeb" width="180" height="60">
+        </a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class ="nav__list">
+            <li><a href="/" class="nav__link">Home</a></li>
+            <li><a href="/about" class="nav__link">About</a></li>
+            <li><a href="/services" class="nav__link">Services</a></li>
+            <li><a href="/portfolio" class="nav__link">Portfolio</a></li>
+            <li><a href="/quote" class="nav__link">Quote</a></li>
+            <li><a href="/contact" class="nav__link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__burger"></i>
+          <i class="ri-close-line nav__close"></i>
+        </div>
+      </nav>
+  </header>
+
+  <main role="main" > 
+
+  <div class="hero">
+    <h2>Get a Free Quote</h2>
+    <p>Tell me about your business and what kind of website you need. I’ll follow up quickly with a custom quote.</p>
+  </div>
+
+  <main>
+    <section class="quote-form">
+      <div class="container">
+        <form name="quote" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="quote">
+
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="business">Business Name</label>
+          <input type="text" id="business" name="business">
+
+          <label for="type">Type of Site</label>
+          <select id="type" name="type">
+            <option value="1-page">1-Page Website</option>
+            <option value="multi-page">Full Business Website (3–5 pages)</option>
+            <option value="not-sure">Not Sure Yet</option>
+          </select>
+
+          <label for="goals">What Do You Need?</label>
+          <textarea id="goals" name="goals" rows="5" placeholder="Tell me a bit about what you want your site to do..." required></textarea>
+
+          <button type="submit" class="cta">Submit Quote Request</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+   </main>
+
+  <footer>
+    <div class="footer-logo">
+      <img src="/images/HeaderWhiteLogo.png" height="40" width="120">
+    </div>
+  </div>
+  <div class="footer-copy">
+    <p>&copy; 2025 BrittonWeb</p>
+  </div>
+    <div class="footer-socials">
+      <a href="/contact">Contact</a>
+      <a href="https://github.com/lelandbritton">GitHub</a>
+  </footer>
+  <script src="navbar.js"></script>
