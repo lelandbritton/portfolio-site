@@ -435,3 +435,23 @@ footer img{
 .footer-socials a:hover{
   color: #00bfff;
 }
+
+/* 200$ package styling */ 
+
+.packageOne h1{
+  text-align: center;
+  padding: 1rem;
+}
+.packageWrapper{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.packageList{
+  flex: 0.4;
+}
+
+.packageList li{
+  margin-bottom: 10px;
+}
