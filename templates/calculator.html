@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section id="quote-calculator" style="max-width:600px; margin:auto; font-family: Arial, sans-serif;">
+  <h2>Website Quote Calculator</h2>
+
+  <form id="calcForm">
+    <label>
+      Website Size / Complexity:<br>
+      <select id="websiteSize" required>
+        <option value="200">One-page website — $200</option>
+        <option value="450">Small business website (3-5 pages) — $450</option>
+        <option value="750">Medium website (6-10 pages) — $750</option>
+      </select>
+    </label>
+
+    <label>
+      Design & Branding:<br>
+      <select id="branding" required>
+        <option value="0">Use existing branding — $0</option>
+        <option value="100">Basic custom branding — $100</option>
+        <option value="300">Full custom branding & design — $300</option>
+      </select>
+    </label>
+
+    <label>
+      Features:<br>
+      <input type="checkbox" id="blog" value="150"> Blog Integration (+$150)<br>
+      <input type="checkbox" id="advSEO" value="150"> Advanced SEO (+$150)
+    </label>
+
+    <label>
+      Content:<br>
+      <input type="radio" name="content" value="0" checked> Client provides content — $0<br>
+      <input type="radio" name="content" value="100"> Copywriting per page — +$100
+    </label>
+
+    <label>
+      Monthly Payments<br>
+      <input type="checkbox" id="hosting" value="60"> Add Hosting $60/month
+      <input type="checkbox" id="maintenance" value="20"> Add Maintenance $20/month
+    </label>
+
+    <strong>Estimated One-Time Cost: $<span id="oneTimeCost">0</span></strong><br>
+    <strong>Estimated Monthly Cost: $<span id="monthlyCost">0</span></strong>
+  </form>
+</section>
+
+<script>
+  const websiteSize = document.getElementById('websiteSize');
+  const branding = document.getElementById('branding');
+  const blog = document.getElementById('blog');
+  const advSEO = document.getElementById('advSEO');
+  const hosting = document.getElementById('hosting');
+  const maintenance = document.getElementById('maintenance');
+  const contentRadios = document.getElementsByName('content');
+
+  const oneTimeCostSpan = document.getElementById('oneTimeCost');
+  const monthlyCostSpan = document.getElementById('monthlyCost');
+
+  function calculateCosts() {
+    let oneTimeCost = 0;
+    let monthlyCost = 0;
+
+    oneTimeCost += parseInt(websiteSize.value);
+    oneTimeCost += parseInt(branding.value);
+
+    if(blog.checked) oneTimeCost += parseInt(blog.value);
+    if(advSEO.checked) oneTimeCost += parseInt(advSEO.value);
+
+    for (const radio of contentRadios) {
+      if (radio.checked) {
+        oneTimeCost += parseInt(radio.value);
+        break;
+      }
+    }
+
+    if(hosting.checked) monthlyCost += parseInt(hosting.value);
+    if(maintenance.checked) monthlyCost += parseInt(maintenance.value);
+
+    oneTimeCostSpan.textContent = oneTimeCost;
+    monthlyCostSpan.textContent = monthlyCost;
+  }
+
+  // Update costs on any input change
+  websiteSize.addEventListener('change', calculateCosts);
+  branding.addEventListener('change', calculateCosts);
+  blog.addEventListener('change', calculateCosts);
+  advSEO.addEventListener('change', calculateCosts);
+  hosting.addEventListener('change', calculateCosts);
+  maintenance.addEventListener('change', calculateCosts);
+
+  for (const radio of contentRadios) {
+    radio.addEventListener('change', calculateCosts);
+  }
+
+  // Initial calculation
+  calculateCosts();
+</script>
+
+
+{% endblock content %}

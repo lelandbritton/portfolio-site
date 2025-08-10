@@ -4,7 +4,10 @@
 
   <div class="hero">
     <h2>Get a Free Quote</h2>
-    <p>Tell me about your business and what kind of website you need. I’ll follow up quickly with a custom quote.</p>
+    <p>Tell me about your business and what kind of website you need. I’ll follow up within 24 hours with a custom quote.</p>
+    <div class="hero-buttons">
+      <a href="/calculator" class="cta">Quote Estimate Calculator</a>
+    </div> 
   </div>
 
   <main>
@@ -20,14 +23,10 @@
           <input type="email" id="email" name="email" required>
 
           <label for="business">Business Name</label>
-          <input type="text" id="business" name="business">
+          <input type="text" id="business" name="business" required>
 
-          <label for="type">Type of Site</label>
-          <select id="type" name="type">
-            <option value="1-page">1-Page Website</option>
-            <option value="multi-page">Full Business Website (3–5 pages)</option>
-            <option value="not-sure">Not Sure Yet</option>
-          </select>
+          <label for="budget">budget</label>
+          <input type="number" id="budget" name="budget" min="40" max="10000" required>
 
           <label for="goals">What Do You Need?</label>
           <textarea id="goals" name="goals" rows="5" placeholder="Tell me a bit about what you want your site to do..." required></textarea>

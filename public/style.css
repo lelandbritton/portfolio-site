@@ -339,6 +339,7 @@ label {
 
 input[type="text"],
 input[type="email"],
+input[type="number"],
 select,
 textarea {
   width: 100%;
